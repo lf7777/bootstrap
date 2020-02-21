@@ -1,0 +1,132 @@
+顶部引入CSS文件.
+
+<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+------------------------------------------------------------------------------------
+
+脚本引入JS文件.
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+------------------------------------------------------------------------------------
+
+文件Staticfile CDN地址. 可直接导入. bootstrap.min.css jquery.min.js bootstrap.min.js
+
+bootstrap.min.css 的大小是 110KB左右.
+
+<meta name='renderer' content='webkit'>
+国产浏览器提速标签.
+
+
+CLASS:
+
+栅格系统:
+
+屏幕尺寸:	    	          固定栅格容器的宽度(container) 调整栅格分数的类前缀
+
+<768px(超小屏幕)屏幕较小的手机	         auto(100%)		    col-xs-数值
+
+768px<=屏幕<992px(小屏幕)正常的手机	 750px			    col-sm-数值
+
+992px<=屏幕<1200px(中等屏幕)平板	 970px			    col-md-数值
+
+1200px<=屏幕(大屏幕)电脑..电视等	 1170px 		    col-lg-数值
+
+书写规范:
+首先要用一个 类名container(container为固定大小,根据media写的宽度范围,有固定的宽度px,并且固定居中.container-fluid为浏览器下的百分百布局,称为流式布局)的div 作为最外侧,因为在媒体查询的时候,它的源码有固定的大小.
+
+然后用一个大的 类名为row 的div 包裹 1-12的小div.这是他的写法问题,不这么写会有问题.
+总体来说:栅格容器(container)>栅格行(row)>栅格
+
+栅格嵌套:
+在栅格的内部还可以嵌套栅格.
+
+栅格中的图片问题:
+
+
+1.在不同屏幕下类的语义化写法:
+col-xs-6 在超小屏幕下占一半.
+col-sm-4 小屏幕要大一些,一排摆3个.
+col-md-3 在中屏幕更大一些,一排可以摆4个.
+col-md-2 在大屏幕下更大了,一排可以排6个.
+
+对齐:
+1.text-left
+2.text-right
+3.text-center
+4.text-justify
+5.text-nowrap
+
+引用:(类似markdown的的内容部分)
+写法:
+(1)<blockquote>(btstrp使该标签,最左边出现一个灰色的竖线.)
+
+<p></p>
+<footer>btstrp使该footer内容会呈现(-灰色字)</footer>
+
+<blockquote>
+
+(2)<blockquote class='blockquote-reverse'>
+内容全体靠右,-也靠最右.
+(bootstrap直接更改了该标签)
+
+列表:
+<ul class = 'list-unstyle'>
+</ul>
+展示的结果等同于 : list-style = none;  
+
+
+!!!常用 表格:
+(1) <table class = 'table'>
+<tr>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+</table>
+普通百分百宽度表格.
+
+(2) <table class = 'table table-striped'>
+</table>
+条纹状表格.(隔行换色的表格)
+
+(3) <tale class = 'table table-bordered'></table>
+
+(4) <tale class = 'table table-hover'></table>
+鼠标悬停换色.
+
+(5) <tale class = 'table table-condensed'></table>
+紧缩的表格,padding变小.
+
+(6) 为行上颜色,行内class:
+active:正常很浅的灰色.
+success:浅绿色.
+info:较深的绿色.
+warning:浅红色.
+danger:稍微深的红色.
+(同时也可以给<td class='danger'><th>加class)
+
+
+!!!常用 表单:
+(1) <input class='form-control'></input>
+宽度变为100%,表单点击会带阴影,并且圆角.
+
+(2) input尺寸:<input class='input-lg'> 输入框大小
+从大到小
+input - lg
+input - sm
+
+
+!!!常用 9.按钮:
+btn btn-success 绿色的
+btn btn-primary 蓝色的
+等等...
+btn-block 让按钮独自占一行.
+
+
+10.图片:
+img-rounded 圆角图片
+img-circle 圆的
+img-thumbnail 带边框的
